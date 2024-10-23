@@ -25,7 +25,7 @@ rc1:
   mov x3, 178 // posicion en X.
   mov x4, 148 // posicion en Y.
   mov x5, 160 // largo 
-  mov x6, 95 // alto
+  mov x6, 96 // alto
   mov w27, 0xA306 // color marron contorno
 
   bl drawRectangle
@@ -34,7 +34,7 @@ rc2:
   mov x3, 180 // posicion en X.
   mov x4, 150 // posicion en Y.
   mov x5, 156 // largo 
-  mov x6, 91 // alto
+  mov x6, 92 // alto
   mov w27, 0xDD6F // color marron claro
 
   bl drawRectangle
@@ -42,7 +42,7 @@ rc2:
 rc3:
   mov x3, 185 // posicion en X.
   mov x4, 141 // posicion en Y.
-  mov x5, 158 // largo 
+  mov x5, 160 // largo 
   mov x6, 2 // alto
   mov w27, 0xA306 // color marron contorno
 
@@ -326,6 +326,29 @@ diente:
   bl drawRectangle
 
 dibujar_cuerpo:
+cuerpo1:
+  mov x3, 212 // posicion en X.
+  mov x4, 244 // posicion en Y.
+  mov x5, 2 // largo 
+  mov x6, 65 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo2:
+  mov x3, 212 // posicion en X.
+  mov x4, 307 // posicion en Y.
+  mov x5, 96 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo3:
+  mov x3, 306   // posicion en X.
+  mov x4, 244   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 65    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
 
 dibujar_brazos:
 
