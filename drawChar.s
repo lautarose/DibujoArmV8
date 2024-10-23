@@ -515,7 +515,7 @@ bi11:
 bi12:
   mov x3, 187   // posicion en X.
   mov x4, 258   // posicion en Y.
-  mov x5, 24     // largo 
+  mov x5, 25     // largo 
   mov x6, 1    // alto
   mov w27, 0xDD6F // color marron claro
   bl drawRectangle
@@ -523,7 +523,7 @@ bi12:
 bi13:
   mov x3, 186   // posicion en X.
   mov x4, 259   // posicion en Y.
-  mov x5, 24     // largo 
+  mov x5, 26     // largo 
   mov x6, 1    // alto
   mov w27, 0xDD6F // color marron claro
   bl drawRectangle
@@ -531,7 +531,7 @@ bi13:
 bi14:
   mov x3, 185   // posicion en X.
   mov x4, 260   // posicion en Y.
-  mov x5, 24     // largo 
+  mov x5, 27     // largo 
   mov x6, 1    // alto
   mov w27, 0xDD6F // color marron claro
   bl drawRectangle
