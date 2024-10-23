@@ -10,18 +10,30 @@
 
 drawBG:
   add x29, x30, 0 // guardo el return en x29
-  mov w10, 0xFFFF   // fondo blanco
-  add x13, x0, 0    // Seteo la direccion base del framebuffer.
-	add x11, x2, 0    // Tamaño en Y
-loop1:
-	mov x12, x1       // Tamaño en X
-loop0:
-	sturh w10,[x13]	  // Setear el color del pixel N
-	add x13,x13,2	   	// Siguiente pixel
-  sub x12,x12,1     // Decrementar el contador X
-	cbnz x12,loop0	  // Si no terminó la fila, saltar
-	sub x11,x11,1	   	// Decrementar el contador Y
-	cbnz x11,loop1	  // Si no es la última fila, saltar
+
+fondo1:
+  mov x3, 0   // posicion en X.
+  mov x4, 0   // posicion en Y.
+  mov x5, 512     // largo 
+  mov x6, 256    // alto
+  mov w27, 0x8F7F // color celeste
+  bl drawRectangle
+
+fondo2:
+  mov x3, 0   // posicion en X.
+  mov x4, 256   // posicion en Y.
+  mov x5, 512     // largo 
+  mov x6, 128    // alto
+  mov w27, 0x765F // color celeste intermedio
+  bl drawRectangle
+
+fondo3:
+  mov x3, 0   // posicion en X.
+  mov x4, 384   // posicion en Y.
+  mov x5, 512     // largo 
+  mov x6, 128    // alto
+  mov w27, 0x54DE // color celeste oscuro
+  bl drawRectangle
 
     br x29
-  
+    
