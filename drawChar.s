@@ -282,6 +282,15 @@ rc32:
   bl drawRectangle
 
 dibujar_ojos:
+ojo_izq:
+mov x7, 214 // posicion en x.
+mov x8, 168 // posicion en Y.
+bl dibujar_ojo
+
+ojo_der:
+mov x7, 276 // posicion en X.
+mov x8, 168 // posicion en Y.
+bl dibujar_ojo
 
 dibujar_boca:
 
@@ -291,6 +300,146 @@ dibujar_brazos:
 
 dibujar_piernas:
 
+    br x29 // retorno
 
-    br x29
+// funcion para dibujar un ojo dadas las coordenadas //
+// parametros:
+// x7 posicion en X
+// x8 posicion en Y
+
+dibujar_ojo:
+  add x28, x30, 0 // guardo el retorno
+lo1:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 10 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 7 // largo 
+  mov x6, 34 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo2:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 8 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 1 // le sumo 1 pixel en Y.
+  mov x5, 11 // largo 
+  mov x6, 32 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo3:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 6 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 2 // le sumo 1 pixel en Y.
+  mov x5, 15 // largo 
+  mov x6, 30 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo4:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 5 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 3 // le sumo 1 pixel en Y.
+  mov x5, 17 // largo 
+  mov x6, 28 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo5:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 4 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 4 // le sumo 1 pixel en Y.
+  mov x5, 19 // largo 
+  mov x6, 26 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo6:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 3 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 5 // le sumo 1 pixel en Y.
+  mov x5, 21 // largo 
+  mov x6, 24 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo7:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 2 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 7 // le sumo 1 pixel en Y.
+  mov x5, 23 // largo 
+  mov x6, 20 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo8:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 1 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 9 // le sumo 1 pixel en Y.
+  mov x5, 25 // largo 
+  mov x6, 16 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+lo9:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 0 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 12 // le sumo 1 pixel en Y.
+  mov x5, 27 // largo 
+  mov x6, 10 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+pup1:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 6 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 11 // le sumo 1 pixel en Y.
+  mov x5, 3 // largo 
+  mov x6, 12 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+pup2:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 4 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 12 // le sumo 1 pixel en Y.
+  mov x5, 7 // largo 
+  mov x6, 10 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+pup3:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y
+  add x3, x3, 3 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 14 // le sumo 1 pixel en Y.
+  mov x5, 9 // largo 
+  mov x6, 6 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+brillo:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Y  
+  add x3, x3, 5 // le sumo 10 pixeles en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 14 // le sumo 1 pixel en Y.
+  mov x5, 3 // largo 
+  mov x6, 3 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
+
+
+
+  br x28 // retorno
+ 
     
