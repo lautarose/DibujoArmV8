@@ -293,6 +293,37 @@ mov x8, 168 // posicion en Y.
 bl dibujar_ojo
 
 dibujar_boca:
+boc1:
+  mov x3, 234 // posicion en X.
+  mov x4, 221 // posicion en Y.
+  mov x5, 48 // largo 
+  mov x6, 7 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+boc2:
+  mov x3, 237 // posicion en X.
+  mov x4, 228 // posicion en Y.
+  mov x5, 42 // largo 
+  mov x6, 4 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+boc3:
+  mov x3, 245 // posicion en X.
+  mov x4, 232 // posicion en Y.
+  mov x5, 26 // largo 
+  mov x6, 4 // alto
+  mov w27, 0x0000 // color negro
+  bl drawRectangle
+
+diente:
+  mov x3, 262 // posicion en X.
+  mov x4, 232 // posicion en Y.
+  mov x5, 4 // largo 
+  mov x6, 4 // alto
+  mov w27, 0xFFFF // color blanco
+  bl drawRectangle
 
 dibujar_cuerpo:
 
