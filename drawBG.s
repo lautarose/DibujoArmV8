@@ -9,6 +9,7 @@
   // x2: tamaño de la pantalla en Y.
 
 drawBG:
+  add x29, x30, 0 // guardo el return en x29
   mov w10, 0xFFFF   // fondo blanco
   add x13, x0, 0    // Seteo la direccion base del framebuffer.
 	add x11, x2, 0    // Tamaño en Y
@@ -22,5 +23,5 @@ loop0:
 	sub x11,x11,1	   	// Decrementar el contador Y
 	cbnz x11,loop1	  // Si no es la última fila, saltar
 
-    br x30
+    br x29
   
