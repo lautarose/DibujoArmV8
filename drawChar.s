@@ -423,6 +423,118 @@ cuerpo12:
   bl drawRectangle
 
 dibujar_brazos:
+brazo_izq:
+bi1:
+  mov x3, 188   // posicion en X.
+  mov x4, 255   // posicion en Y.
+  mov x5, 24     // largo 
+  mov x6, 2    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi2:
+  mov x3, 182   // posicion en X.
+  mov x4, 261   // posicion en Y.
+  mov x5, 30     // largo 
+  mov x6, 2    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi3:
+  mov x3, 182   // posicion en X.
+  mov x4, 275   // posicion en Y.
+  mov x5, 30     // largo 
+  mov x6, 2    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi4:
+  mov x3, 182   // posicion en X.
+  mov x4, 261   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 16    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi5:
+  mov x3, 184   // posicion en X.
+  mov x4, 263   // posicion en Y.
+  mov x5, 28     // largo 
+  mov x6, 12    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+bi6:
+  mov x3, 183   // posicion en X.
+  mov x4, 260   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi7:
+  mov x3, 184   // posicion en X.
+  mov x4, 259   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi8:
+  mov x3, 185   // posicion en X.
+  mov x4, 258   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi9:
+  mov x3, 186   // posicion en X.
+  mov x4, 257   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi10:
+  mov x3, 187   // posicion en X.
+  mov x4, 256   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+bi11:
+  mov x3, 188   // posicion en X.
+  mov x4, 257   // posicion en Y.
+  mov x5, 24     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+bi12:
+  mov x3, 187   // posicion en X.
+  mov x4, 258   // posicion en Y.
+  mov x5, 24     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+bi13:
+  mov x3, 186   // posicion en X.
+  mov x4, 259   // posicion en Y.
+  mov x5, 24     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+bi14:
+  mov x3, 185   // posicion en X.
+  mov x4, 260   // posicion en Y.
+  mov x5, 24     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
 
 dibujar_piernas:
 pierna_izq:
@@ -434,7 +546,6 @@ pierna_der:
   mov x7, 272 // coordenada en x
   mov x8, 309 // coordenada en y
   bl dibujar_pierna
-
 
     br x29 // retorno
 
