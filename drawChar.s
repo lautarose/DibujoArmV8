@@ -246,7 +246,7 @@ rc28:
   mov x4, 149 // posicion en Y.
   mov x5, 1 // largo 
   mov x6, 92 // alto
-  mov w27, 0xD4EC // color marron sombreado
+  mov w27, 0xCCAB // color marron sombreado
   bl drawRectangle
 
 rc29:
@@ -254,7 +254,7 @@ rc29:
   mov x4, 148 // posicion en Y.
   mov x5, 1 // largo 
   mov x6, 92 // alto
-  mov w27, 0xD4EC // color marron sombreado
+  mov w27, 0xCCAB // color marron sombreado
   bl drawRectangle
 
 rc30:
@@ -262,7 +262,7 @@ rc30:
   mov x4, 147 // posicion en Y.
   mov x5, 1 // largo 
   mov x6, 92 // alto
-  mov w27, 0xD4EC // color marron sombreado
+  mov w27, 0xCCAB // color marron sombreado
   bl drawRectangle
 
 rc31:
@@ -270,7 +270,7 @@ rc31:
   mov x4, 146 // posicion en Y.
   mov x5, 1 // largo 
   mov x6, 92 // alto
-  mov w27, 0xD4EC // color marron sombreado
+  mov w27, 0xCCAB // color marron sombreado
   bl drawRectangle
 
 rc32:
@@ -278,7 +278,7 @@ rc32:
   mov x4, 145 // posicion en Y.
   mov x5, 1 // largo 
   mov x6, 92 // alto
-  mov w27, 0xD4EC // color marron sombreado
+  mov w27, 0xCCAB // color marron sombreado
   bl drawRectangle
 
 dibujar_ojos:
@@ -350,9 +350,91 @@ cuerpo3:
   mov w27, 0xA306 // color marron contorno
   bl drawRectangle
 
+cuerpo4:
+  mov x3, 214   // posicion en X.
+  mov x4, 244   // posicion en Y.
+  mov x5, 92     // largo 
+  mov x6, 63    // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+cuerpo5:
+  mov x3, 311   // posicion en X.
+  mov x4, 244   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 60    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo6:
+  mov x3, 308   // posicion en X.
+  mov x4, 305   // posicion en Y.
+  mov x5, 1     // largo 
+  mov x6, 3    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo7:
+  mov x3, 309   // posicion en X.
+  mov x4, 304   // posicion en Y.
+  mov x5, 1     // largo 
+  mov x6, 3    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo8:
+  mov x3, 310   // posicion en X.
+  mov x4, 303   // posicion en Y.
+  mov x5, 1     // largo 
+  mov x6, 3    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo9:
+  mov x3, 311   // posicion en X.
+  mov x4, 302   // posicion en Y.
+  mov x5, 1     // largo 
+  mov x6, 3    // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+cuerpo10:
+  mov x3, 308   // posicion en X.
+  mov x4, 244   // posicion en Y.
+  mov x5, 3     // largo 
+  mov x6, 59    // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
+
+cuerpo11:
+  mov x3, 308   // posicion en X.
+  mov x4, 303   // posicion en Y.
+  mov x5, 2     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
+
+cuerpo12:
+  mov x3, 308   // posicion en X.
+  mov x4, 304   // posicion en Y.
+  mov x5, 1     // largo 
+  mov x6, 1    // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
+
 dibujar_brazos:
 
 dibujar_piernas:
+pierna_izq:
+  mov x7, 231 // coordenada en x
+  mov x8, 309 // coordenada en y
+  bl dibujar_pierna
+
+pierna_der:
+  mov x7, 272 // coordenada en x
+  mov x8, 309 // coordenada en y
+  bl dibujar_pierna
+
 
     br x29 // retorno
 
@@ -492,8 +574,129 @@ brillo:
   mov w27, 0xFFFF // color blanco
   bl drawRectangle
 
+  br x28 // retorno
+
+// funcion para dibujar una pierna dadas las coordenadas //
+// parametros:
+// x7 posicion en X
+// x8 posicion en Y
+
+dibujar_pierna:
+  add x28, x30, 0 // guardo el retorno en x28
+
+pierna1:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 2 // largo 
+  mov x6, 25 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna2:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en X
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 23 // le sumo 23 pixeles en Y.
+  mov x5, 19 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna3:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 17 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 2 // largo 
+  mov x6, 25 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna4:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 22 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 2 // largo 
+  mov x6, 20 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna5:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 19 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 22 // le sumo 22 pixeles en Y.
+  mov x5, 1 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna6:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 20 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 21 // le sumo 22 pixeles en Y.
+  mov x5, 1 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna7:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 21 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 20 // le sumo 22 pixeles en Y.
+  mov x5, 1 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna8:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 22 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 19 // le sumo 22 pixeles en Y.
+  mov x5, 1 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xA306 // color marron contorno
+  bl drawRectangle
+
+pierna9:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 2 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 15 // largo 
+  mov x6, 23 // alto
+  mov w27, 0xDD6F // color marron claro
+  bl drawRectangle
+
+pierna10:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 19 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  mov x5, 3 // largo 
+  mov x6, 20 // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
+
+pierna11:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 19 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 20
+  mov x5, 1 // largo 
+  mov x6, 2 // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
+
+pierna12:
+  add x3, x7, 0 // guardo en x3 la posicion inicial en Xd
+  add x3, x3, 20 // le sumo 17 pixeles en X.
+  add x4, x8, 0 // guardo en x4 posicion inicial en Y
+  add x4, x4, 20
+  mov x5, 1 // largo 
+  mov x6, 1 // alto
+  mov w27, 0xCCAB // color marron sombra
+  bl drawRectangle
 
 
   br x28 // retorno
- 
     
